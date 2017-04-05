@@ -49,7 +49,7 @@ input, select, img {
 	margin-bottom: 5px;
 }
 
-@media screen and (min-width: 365px){
+@media screen and (min-width: 200px){
 	#contenedor {
 		width: 95%;
 		margin: 9px;
