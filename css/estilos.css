@@ -49,9 +49,12 @@ input, select, img {
 	margin-bottom: 5px;
 }
 
-@media screen and (min-width: 400px){
+@media screen and (min-width: 365px){
 	#contenedor {
 		width: 95%;
-		margin: 0 auto;
+		margin: 9px;
+		-webkit-box-shadow: -12px 15px 46px -16px rgba(0,0,0,0.74);
+		-moz-box-shadow: -12px 15px 46px -16px rgba(0,0,0,0.74);
+		box-shadow: -12px 15px 46px -16px rgba(0,0,0,0.74);
 	}
 }
