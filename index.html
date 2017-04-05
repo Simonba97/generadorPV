@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Generador de partidos.</title>	
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.js"
+	integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+	crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Sansita" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/logica.js"></script>
+
+</head>
+<body>
+	<!-- CONTENEDOR GENERAL -->
+	<div id="contenedor">
+
+		<!-- PANEL PARA LA SELECCIÓN DE LA ACCIÓN -->
+		<div class="panel panel-default">
+			<div class="panel-heading titulo">Seleccione la sección que desea generar.</div>
+			<div class="panel-body">
+				<center><button type="button" class="btn btn-success" id="proximoPartido">PRÓXIMO PARTIDO</button>&nbsp;<button type="button" class="btn btn-danger" id="resultado">RESULTADO</button></center>
+			</div>
+		</div>
+
+		<!-- PANEL PARA EL GENERADOR DEL PRÓXIMO PARTIDO -->
+		<div class="panel panel-default" id="contProximo">
+			<div class="panel-heading titulo">Generador para próximo partido.</div>
+			<div class="panel-body"> 
+				<div id="contenedorEquipos" style="text-align: center;">
+
+					<!-- SELECTOR PARA EQUIPO LOCAL -->
+					<select  id="slcEquipoLocal" style="width: inherit;">
+						<option value="">Equipo Local</option>
+						<option value="180">Pasto</option>
+						<option value="1655">Jaguares</option>
+						<option value="3208">Uniautónoma</option>
+						<option value="111">Deportivo Cali</option>
+						<option value="266">Cúcuta</option>
+						<option value="67">Indep. Medellín</option>
+						<option value="88">Once Caldas</option>
+						<option value="184">Millonarios</option>
+						<option value="933">Patriotas</option>
+						<option value="183">Santa Fe</option>
+						<option value="927">Cortuluá</option>
+						<option value="922">Águilas Doradas</option>
+						<option value="921">Alianza Petrolera</option>
+						<option value="177">Boyacá Chicó</option>
+						<option value="81">Junior</option> 
+						<option value="182">Envigado</option>
+						<option value="179">Tolima</option>
+						<option value="105">Atlético Nacional</option>
+						<option value="597">Equidad</option>
+						<option value="176">Huila</option>
+					</select>
+					<span>vs.</span>
+					<!-- SELECTOR PARA EQUIPO VISITANTE -->
+					<select  id="slcEquipoVisitante" style="width: inherit;">
+						<option value="">Equipo Visitante</option>
+						<option value="180">Pasto</option>
+						<option value="1655">Jaguares</option>
+						<option value="3208">Uniautónoma</option>
+						<option value="111">Deportivo Cali</option>
+						<option value="266">Cúcuta</option>
+						<option value="67">Indep. Medellín</option>
+						<option value="88">Once Caldas</option>
+						<option value="184">Millonarios</option>
+						<option value="933">Patriotas</option>
+						<option value="183">Santa Fe</option>
+						<option value="927">Cortuluá</option>
+						<option value="922">Águilas Doradas</option>
+						<option value="921">Alianza Petrolera</option>
+						<option value="177">Boyacá Chicó</option>
+						<option value="81">Junior</option>
+						<option value="182">Envigado</option>
+						<option value="179">Tolima</option>
+						<option value="105">Atlético Nacional</option>
+						<option value="597">Equidad</option>
+						<option value="176">Huila</option>
+					</select>	
+				</div>	
+
+				<div id="ContenedorEscudos" style="text-align: center;">
+					<img style="height: 150px" src="" class="img-circle"  id="imgEquipoLocal">vs.
+					<img style="height: 150px" src="" class="img-circle"  id="imgEquipoVisitante">
+				</div>
+				<input id="dateFechaPartido" type="date" class="form-control" placeholder="Fecha del partido" >			    
+				<div id="contTorneos"  style="text-align: center;">
+					<select  id="slcTorneo">			
+						<option value="1">Liga Águila 2017 - I</option>		
+						<option value="2">Copa Águila 2017</option>
+						<option value="3">Copa Libertadores 2017</option>				
+					</select>	   		
+				</div>
+				<div id="contFecha"  style="text-align: center;">
+					<select  id="slcFecha">			
+						<option value="1">Fecha #1</option>		
+						<option value="2">Fecha #2</option>		
+						<option value="3">Fecha #3</option>		
+						<option value="4">Fecha #4</option>		
+						<option value="5">Fecha #5</option>		
+						<option value="6">Fecha #6</option>		
+						<option value="7">Fecha #7</option>		
+						<option value="8">Fecha #8</option>		
+						<option value="9">Fecha #9</option>		
+						<option value="10">Fecha #10</option>		
+						<option value="11">Fecha #11</option>		
+						<option value="12">Fecha #12</option>		
+						<option value="13">Fecha #13</option>		
+						<option value="14">Fecha #14</option>		
+						<option value="15">Fecha #15</option>		
+						<option value="16">Fecha #16</option>		
+						<option value="17">Fecha #17</option>		
+						<option value="18">Fecha #18</option>		
+						<option value="19">Fecha #19</option>		
+						<option value="20">Fecha #20</option>							
+					</select>	   		
+				</div>	    
+				<input type="text" class="form-control" placeholder="Nombre del estadio" disabled id="txtEstadio">		  
+				<input id="hourHora" type="time" class="form-control" placeholder="Hora del compromiso">			    
+
+				<div id="contTV" style="text-align: center;">
+
+				</div>
+
+				<div class="contBotones">
+					<button id="btnGenerarProximo" type="button" class="btn btn-success btn-sm btn-block">GENERAR</button>
+					<button type="button" class="btn btn-danger btn-sm btn-block">LIMPIAR</button>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<!-- PANEL PARA EL GENERADOR DEL RESULTADO -->
+		<div class="panel panel-default" id="contResultado">
+			<div class="panel-heading titulo">Generador del resultado pasado.</div>
+			<div class="panel-body">
+
+				<!-- SELECTOR PARA EQUIPO LOCAL -->
+				<select  id="slcEquipoLocal">
+					<option value="">Equipo Local</option>
+					<option value="180">Pasto</option>
+					<option value="1655">Jaguares</option>
+					<option value="3208">Uniautónoma</option>
+					<option value="111">Deportivo Cali</option>
+					<option value="266">Cúcuta</option>
+					<option value="67">Indep. Medellín</option>
+					<option value="88">Once Caldas</option>
+					<option value="184">Millonarios</option>
+					<option value="933">Patriotas</option>
+					<option value="183">Santa Fe</option>
+					<option value="927">Cortuluá</option>
+					<option value="922">Águilas Doradas</option>
+					<option value="921">Alianza Petrolera</option>
+					<option value="177">Boyacá Chicó</option>
+					<option value="81">Junior</option>
+					<option value="182">Envigado</option>
+					<option value="179">Tolima</option>
+					<option value="105">Atlético Nacional</option>
+					<option value="597">Equidad</option>
+					<option value="176">Huila</option>
+				</select>
+				<span>vs.</span>
+				<!-- SELECTOR PARA EQUIPO VISITANTE -->
+				<select  id="slcEquipoVisitante">
+					<option value="">Equipo Visitante</option>
+					<option value="180">Pasto</option>
+					<option value="1655">Jaguares</option>
+					<option value="3208">Uniautónoma</option>
+					<option value="111">Deportivo Cali</option>
+					<option value="266">Cúcuta</option>
+					<option value="67">Indep. Medellín</option>
+					<option value="88">Once Caldas</option>
+					<option value="184">Millonarios</option>
+					<option value="933">Patriotas</option>
+					<option value="183">Santa Fe</option>
+					<option value="927">Cortuluá</option>
+					<option value="922">Águilas Doradas</option>
+					<option value="921">Alianza Petrolera</option>
+					<option value="177">Boyacá Chicó</option>
+					<option value="81">Junior</option>
+					<option value="182">Envigado</option>
+					<option value="179">Tolima</option>
+					<option value="105">Atlético Nacional</option>
+					<option value="597">Equidad</option>
+					<option value="176">Huila</option>
+				</select>	
+			</div>	
+			
+			<div id="ContenedorEscudos">
+				<img src="#" alt="..." class="img-circle">
+				<img src="#" alt="..." class="img-circle">
+			</div>
+
+			<input type="text" class="form-control" placeholder="Fecha del partido">			    
+			<input type="text" class="form-control" placeholder="Nombre del torneo">		  
+			<input type="text" class="form-control" placeholder="Fecha del torneo">			    	  
+			<input type="text" class="form-control" placeholder="Resultado">			    	  
+			<input type="text" class="form-control" placeholder="URL vídeo goles">			    	  
+
+			<div class="contBotones">
+				<button id="btnGenerar" type="button" class="btn btn-success btn-sm btn-block">GENERAR</button>
+				<button id="btnLimbiar" type="button" class="btn btn-danger btn-sm btn-block">LIMPIAR</button>
+			</div>
+
+		</div>
+
+	</div>
+
+		<div id="resultados">
+			
+			<div  id="contResultados">
+				
+			</div>
+		</div>
+	
+
+</div>
+</body>
+</html>
