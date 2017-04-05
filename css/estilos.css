@@ -48,3 +48,10 @@ select {
 input, select, img {
 	margin-bottom: 5px;
 }
+
+@media screen and (max-width: 650px){
+	#contenedor {
+		width: 95%;
+		margin: 0 auto;
+	}
+}
